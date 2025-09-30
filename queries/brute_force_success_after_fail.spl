@@ -1,0 +1,5 @@
+index=security sourcetype=auth:csv (action=fail OR action=success)
+| bin _time span=5m
+| stats sum(eval(action="fail")) as failed, sum(eval(action="success")) as success values(host) as hosts by src_ip, user, _time
+| where failed>=10 AND success>=1
+| sort - _time, -failed

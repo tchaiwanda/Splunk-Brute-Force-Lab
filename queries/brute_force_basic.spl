@@ -1,0 +1,5 @@
+index=security sourcetype=auth:csv action=fail
+| bin _time span=5m
+| stats count as failed by src_ip, user, _time
+| where failed >= 10
+| sort - _time, -failed

@@ -1,0 +1,34 @@
+<dashboard>
+  <label>Brute Force Detection</label>
+  <row>
+    <panel>
+      <title>Failed Logins Over Time (Top 10 IPs)</title>
+      <chart>
+        <search>
+          <query>index=security sourcetype=auth:csv action=fail | timechart span=5m count as failed by src_ip limit=10 useother=f</query>
+        </search>
+        <option name="charting.chart">line</option>
+      </chart>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <title>Top Source IPs by Failed Logins</title>
+      <table>
+        <search>
+          <query>index=security sourcetype=auth:csv action=fail | stats count as failed by src_ip | sort - failed</query>
+        </search>
+      </table>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <title>Likely Brute Force with Success (5m window)</title>
+      <table>
+        <search>
+          <query>index=security sourcetype=auth:csv (action=fail OR action=success) | bin _time span=5m | stats sum(eval(action="fail")) as failed sum(eval(action="success")) as success values(host) as hosts by src_ip, user, _time | where failed &gt;= 10 AND success &gt;= 1 | sort - _time, -failed</query>
+        </search>
+      </table>
+    </panel>
+  </row>
+</dashboard>
