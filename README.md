@@ -54,7 +54,7 @@ build a dashboard, and create an automated alert. It aligns with SOC Analyst res
 
 ## Alert
 - See `alert/brute_force_alert.md` for configuration details.
-- Recommended schedule: every 5 minutes; throttle 30 minutes.
+- Recommended schedule: every hour; throttle 30 minutes.
 
 ## Documentation (for GitHub)
 
@@ -69,7 +69,7 @@ build a dashboard, and create an automated alert. It aligns with SOC Analyst res
 ![Brute Force Alert](screenshots/success-spl.png)
 
 ## Resume Bullet Tie-In
-- "Built Splunk correlation search & dashboard to detect brute-force attempts; tuned thresholds and created alerting playbook mapped to ATT&CK T1110."
+- Built Splunk correlation search & dashboard to detect brute-force attempts; tuned thresholds and created alerting playbook mapped to ATT&CK T1110.
 
 ---
 
