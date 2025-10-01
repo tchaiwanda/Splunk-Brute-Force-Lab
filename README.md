@@ -11,7 +11,7 @@ build a dashboard, and create an automated alert. It aligns with SOC Analyst res
 ## Ingest Steps (Splunk)
 1. Create (or use) index: **security**
 2. Add Data → Upload → select `sample_auth.csv`
-3. Set **Sourcetype** to `auth:csv` (or create a new one), set **Timestamp** to `_time` with format `%Y-%m-%d %H:%M:%S`
+3. Set **Sourcetype** to `auth:csv` (or create a new one), set **Timestamp** to `_time` with format `Current Time`
 4. Set **Host** field to `host` (field mapping) if prompted
 5. Save and index into **security**
 
