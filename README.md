@@ -71,5 +71,9 @@ build a dashboard, and create an automated alert. It aligns with SOC Analyst res
 ## Resume Bullet Tie-In
 - Built Splunk correlation search & dashboard to detect brute-force attempts; tuned thresholds and created alerting playbook mapped to ATT&CK T1110.
 
+⚠️ Disclaimer: All data used in this project (CSV logs, simulated phishing emails, and indicators of compromise) is synthetic and generated for educational purposes only.
+No real user data, malicious payloads, or production systems were involved.
+This lab is intended solely to demonstrate detection, triage, and incident response workflows in Splunk.
+
 ---
 
