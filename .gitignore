@@ -1,0 +1,56 @@
+# --- macOS System Files ---
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# --- Windows System Files ---
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# --- Logs and Temp Files ---
+*.log
+*.tmp
+*.swp
+*.bak
+
+# --- IDEs and Editors ---
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# --- Python ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+venv/
+.venv/
+
+# --- Node.js ---
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# --- Terraform ---
+*.tfstate
+*.tfstate.*
+.crash
+.terraform/
+terraform.tfvars
+
+# --- Cloud / Misc ---
+*.pem
+*.key
+*.crt
+*.pub
+
+# --- OS Trash ---
+.Trash-*
